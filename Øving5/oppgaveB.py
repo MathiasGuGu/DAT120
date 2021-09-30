@@ -1,4 +1,3 @@
-
 Emails = input("Velg filer med Email: ")
 Output = input("Velg fila som skrives til: ")
 email = []
@@ -8,20 +7,23 @@ def FindEmail(Emails, Output):
     try:
         with open(f"/Users/mathiasgumpen/Desktop/Dat120/Øving5/{Emails}.txt", "r") as reader:
             for line in reader:
-                for part in line.splitlines():
-                    if "From:" in part:
-                        if "<" in part:
-                            mail = part
-                            index1 = mail.find("<") 
-                            index2 = mail.find(">") - 1   
-                            if (True):
-                                for i in range(index2-index1):
-                                    index1 += 1 
-                                    email.append(mail[index1])
-                                    if index1 == index2:
-                                        email.append("\n")        
-                                        continue
+                if "From:" in line:
+                    #print(line)
+                    if "<" in line:
+                        x1 = line.find("<")
+                        x2 = line.find(">") - 1
+                    elif "[" in line:
+                        x1 = line.find("[") 
+                        x2 = line.find("]") - 1
 
+                    for i in range(x2 - x1): 
+                        x1 += 1
+                        email.append(line[x1])
+
+                        if (x1 == x2):
+                            email.append("\n")
+            print(email)
+                     
     except:
         print("Kunne ikke åpne fila") 
 

@@ -1,5 +1,5 @@
 høyde = (input("Hvor høy er du?: "))
-"""
+
 def sjekk_høyde(høyde):
     try:
         type(høyde) == float
@@ -10,8 +10,5 @@ def sjekk_høyde(høyde):
     except:
         print("Du kan ikke ta karusellen")
 sjekk_høyde(høyde)
-"""
 
-for ord in høyde:
-    if not type(ord) == int or not ord == ("."):
         
