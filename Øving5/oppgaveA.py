@@ -1,7 +1,3 @@
-
-#min høyde = 120
-#max er uendelig
-
 def sjekk_alder():
     try:
         høyde = float(input("Hvor høy er du?: "))
