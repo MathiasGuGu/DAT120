@@ -1,11 +1,11 @@
 def sjekk_alder():
     try:
-        høyde = float(input("Hvor høy er du?: "))
+        høyde = float(input("Hvor høy er du i meter?: "))
     except:
         print("Ikke ett lovlig flyttall")
 
     try:
-        if høyde >= 120:
+        if høyde >= 1.20:
             print("Du kan ta karusellen")
         else:
             print("Du kan ikke ta karusellen")

@@ -8,7 +8,6 @@ def FindEmail(Emails, Output):
         with open(f"/Users/mathiasgumpen/Desktop/Dat120/Øving5/{Emails}.txt", "r") as reader:
             for line in reader:
                 if "From:" in line:
-                    #print(line)
                     if "<" in line:
                         x1 = line.find("<")
                         x2 = line.find(">") - 1
@@ -21,9 +20,7 @@ def FindEmail(Emails, Output):
                         email.append(line[x1])
 
                         if (x1 == x2):
-                            email.append("\n")
-            print(email)
-                     
+                            email.append("\n")                     
     except:
         print("Kunne ikke åpne fila") 
 
@@ -34,28 +31,4 @@ def FindEmail(Emails, Output):
     except:
         print("kunne ikke skrive til fila")
 
-def sort_emails(Output):
-
-    #Lager en ny fil som er sortert
-
-    try:
-        items = []
-        with open(f"/Users/mathiasgumpen/Desktop/Dat120/Øving5/{Output}.txt", "r") as reader:
-            for line in reader:
-                items.append(line)
-
-        for i in items:
-            if i not in sorted_email:
-                sorted_email.append(i)
-
-        with open(f"/Users/mathiasgumpen/Desktop/Dat120/Øving5/Sorted.txt", "w") as writer:
-            for item in sorted_email:
-                writer.write(item)
-                
-    except:
-        print("Could not sort")
-
-
-
 FindEmail(Emails, Output)
-sort_emails(Output)
