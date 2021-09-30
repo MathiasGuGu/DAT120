@@ -5,7 +5,7 @@ def sjekk_alder():
         print("Ikke ett lovlig flyttall")
 
     try:
-        if høyde >= 1.20:
+        if høyde >= 1.20 or høyde > 0:
             print("Du kan ta karusellen")
         else:
             print("Du kan ikke ta karusellen")
