@@ -1,6 +1,7 @@
 marcoscba@gmail.com
 rmalviya@apple.com
 Glenn.Gore@melbourneit.com.au
+mailto:rmalviya@apple.com
 palmercliff@gmail.com
 ryanobjc@gmail.com
 jgray@facebook.com
@@ -30,6 +31,7 @@ amp@opendns.com
 philip@cloudera.com
 martin.kuhn@affinitas.de
 anil@kitenga.com
+mailto:a.reiter@web.de
 cos@apache.org
 stevel@apache.org
 ndaley@mac.com
