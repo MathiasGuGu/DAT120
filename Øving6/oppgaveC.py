@@ -1,4 +1,8 @@
+
 import matplotlib.pyplot as plt
+
+
+import numpy as np
 
 fil = "/Users/mathiasgumpen/Desktop/Dat120/Øving6/trykk_og_temperaturlogg.csv"
 
@@ -24,3 +28,11 @@ def get_data():
 
     
 get_data()
+
+
+def histogram():
+    plt.hist(temp)
+    plt.show()
+    
+
+histogram()

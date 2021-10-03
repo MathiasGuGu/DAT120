@@ -1,4 +1,9 @@
+import csv
+from matplotlib import lines
 import matplotlib.pyplot as plt
+
+
+import numpy as np
 
 fil = "/Users/mathiasgumpen/Desktop/Dat120/Øving6/trykk_og_temperaturlogg.csv"
 
@@ -24,3 +29,18 @@ def get_data():
 
     
 get_data()
+
+
+def imposter_sus():
+    imposter = []
+
+    for i in range(len(tid_siden_start)):
+        print(i)
+        if not i == 0:
+            prev = tid_siden_start[i - 1]
+            if not tid_siden_start[i] - prev == 10:
+                imposter.append([prev, tid_siden_start[i]])
+
+    print(imposter)
+
+imposter_sus()

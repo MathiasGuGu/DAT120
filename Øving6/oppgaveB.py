@@ -1,4 +1,6 @@
+
 import matplotlib.pyplot as plt
+
 
 fil = "/Users/mathiasgumpen/Desktop/Dat120/Øving6/trykk_og_temperaturlogg.csv"
 
@@ -24,3 +26,12 @@ def get_data():
 
     
 get_data()
+
+
+def plot():
+    plt.plot(tid_siden_start, temp, "-", label="Temp - celsius")
+    plt.plot(tid_siden_start, trykk_abs, "-", label="Trykk - abs")
+    plt.legend()
+    plt.show()
+
+plot()
