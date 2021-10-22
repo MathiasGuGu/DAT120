@@ -1,1 +1,0 @@
-#desktop/dat120/øving1/oppgaveX
