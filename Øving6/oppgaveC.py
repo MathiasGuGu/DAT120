@@ -31,7 +31,7 @@ get_data()
 
 
 def histogram():
-    plt.hist(temp)
+    plt.hist(temp, bins=50, edgecolor="black")
     plt.show()
     
 

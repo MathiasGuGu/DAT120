@@ -31,16 +31,15 @@ def get_data():
 get_data()
 
 
-def imposter_sus():
+def finn_feil():
     imposter = []
 
     for i in range(len(tid_siden_start)):
-        print(i)
         if not i == 0:
             prev = tid_siden_start[i - 1]
             if not tid_siden_start[i] - prev == 10:
                 imposter.append([prev, tid_siden_start[i]])
 
-    print(imposter)
+    print(f"\n {imposter} \n")
 
-imposter_sus()
+finn_feil()

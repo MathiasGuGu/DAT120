@@ -29,8 +29,11 @@ get_data()
 
 
 def plot():
-    plt.plot(tid_siden_start, temp, "-", label="Temp - celsius")
-    plt.plot(tid_siden_start, trykk_abs, "-", label="Trykk - abs")
+    fig, ax = plt.subplots(2)
+    ax[0].plot(tid_siden_start, temp, "-", color="red")
+    ax[0].set_title("Temp - C")
+    ax[1].plot(tid_siden_start, trykk_abs, "-")
+    ax[1].set_title("Trykk - BAR")
     plt.legend()
     plt.show()
 
