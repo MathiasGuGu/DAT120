@@ -66,17 +66,16 @@ fil = "/Users/mathiasgumpen/Desktop/Dat120/Øving9/sporsmaalsfil.txt"
 def les_spm():
     with open(fil, "r") as reader:
         for linjenr, linje in enumerate(reader):
+
             linje.split()
-            x2 = linje.strip().split(":")
-            x1 = linje.replace(" ", "")
-            x = x1.split(":")
+            x = linje.strip().split(":")
+            riktig_svar = x[1].replace(" ", "")
             svar_liste = x[2].replace("\n", " ").replace("]", " ").strip().replace("[", " ").split(",")
-            spm = SpørreOppgave(x2[0], svar_liste, x[1], linjenr)
+
+            spm = SpørreOppgave(x[0], svar_liste, riktig_svar, linjenr)
             spm.__str__()
             spm.sjekk_svar()
-        
 
-            
 
 if __name__ == "__main__":
     les_spm()
