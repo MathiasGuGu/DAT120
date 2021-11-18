@@ -124,5 +124,4 @@ def still_spørsmål():
 if __name__ == "__main__":
     lag_spillere()
     still_spørsmål()
-    unittest.main()
     
